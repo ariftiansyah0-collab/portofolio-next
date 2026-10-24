@@ -57,7 +57,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      {/* Keahlian */}
       <section className="mt-10">
         <h2 className="mb-4 text-2xl font-bold text-utama">Keahlian</h2>
         <div className="grid gap-4 md:grid-cols-3">
