@@ -87,7 +87,7 @@ export default function Home() {
       {/* Jadwal Belajar */}
       <section>
         <div className="mb-6 bg-white p-5 rounded-xl shadow-sm">
-          <h2 className="mb-2 text-2xl font-bold">Jadwal Belajar</h2>
+          <h2 className="mb-2 text-2xl font-bold text-utama">Jadwal Belajar</h2>
 
           <div className="overflow-x-auto">
             <table className="w-full border-collapse mx-auto">
