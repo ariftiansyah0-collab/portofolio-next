@@ -1,4 +1,4 @@
-export default function SkillCard ({ nama, level }) {
+export default function SkillCard({ nama, level }) {
     return (
         <div className="rounded-xl border-gray-200 bg-white p-5 shadow-sm">
             <h3 className="text-lg font-semibold text-utama">{nama}</h3>
