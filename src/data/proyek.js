@@ -4,7 +4,7 @@ export const proyek = [
         judul: "Halaman Profil Pertama",
         kategori: "HTML",
         minggu: "Minggu 01",
-        gambar: "/proyek/proyek-profil.png",
+        gambar: "/image/AboutMe.png",
         deskripsi: "Halaman web pertama saya, dibuat dengan HTML dasar",
         fitur: [
             "Judul dan paragraf perkenalan dengan h1 dan p",
@@ -17,7 +17,7 @@ export const proyek = [
         judul: "Form kontak",
         kategori: "HTML",
         minggu: "Minggu 02",
-        gambar: "/proyek/proyek-kontak.png",
+        gambar: "/image/ContactMe.png",
         deskripsi: "Form dengan label dan validasi bawaan browser.",
         fitur: [
             "Lima isian dengan label yang terhubung",
@@ -30,7 +30,7 @@ export const proyek = [
         judul: "Tabel Jadwal Belajar",
         kategori: "HTML",
         minggu: "Minggu 02",
-        gambar: "/proyek/proyek-jadwal.png",
+        gambar: "/image/TimeLearn.png",
         deskripsi: "Jadwal belajar mingguan dengan thead dan tbody.",
         fitur: [
             "Judul tabel dengan caption",
@@ -43,7 +43,7 @@ export const proyek = [
         judul: "Portofolio Responsif",
         kategori: "CSS",
         minggu: "Minggu 04",
-        gambar: "/proyek/proyek-responsif.png",
+        gambar: "/image/Responsive.png",
         deskripsi: "Rapi di ponsel, tablet, dan laptop Flexbox.",
         fitur: [
             "Tata letak kartu dengan Flexbox",
@@ -51,7 +51,7 @@ export const proyek = [
             "Diuji di lebar 360,  768, dan 1280 px",
         ],
     },
-    {
+    /*{
         slug: "kalkulator-nilai",
         judul: "Kalkulator Nilai Rapor",
         kategori: "JavaScript",
@@ -76,5 +76,5 @@ export const proyek = [
             "Tahun kabisat dan harga setelah diskon",
             "Setiap fungsi diuji dengan tiga masukan",
         ],
-    },
+    },*/
 ];
