@@ -27,7 +27,7 @@ export default async function DetailProyek({ params }) {
             <Link href="/proyek" className="text-sm font-semibold text-aksen hover:underline">
                 &larr; Kembali ke Daftar Proyek
             </Link>
-            <h1 className="mt-4 text-3xl font-bold text-utama md:text-4xl">{item.judul}</h1>
+            <h1 className="mt-4 text-3xl font-boldtext-utama dark:text-sky-200.md:text-4xl">{item.judul}</h1>
             <p className="mt-2 text-gray-600">{item.kategori} &middot; Dibuat di {item.minggu}
             </p>
             <Image

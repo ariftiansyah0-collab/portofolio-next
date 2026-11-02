@@ -15,7 +15,7 @@ const skills = [
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <main className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-4 py-6 md:py-8">
+      <main className="mx-auto w-full max-w-5xl px-4 py-10">
         <Hero
           nama="Fajriel Ariftiansyah"
           tagline="Siswa kelas XI SMK, calon Junior Web Developer di Kelas Industri UBIG."
