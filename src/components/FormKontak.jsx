@@ -11,47 +11,53 @@ export default function FormKontak() {
     function kirim(e) {
         e.preventDefault();
         const errorBaru = {};
-        if (nama.trim() === "") {
-            errorBaru.nama = "Nama wajib diisi.";
+        if (hp.length < 10) {
+            errorBaru.hp = "Nomor HP minimal 10 angka.";
         }
-        if (!email.includes("@")) {
-            errorBaru.email = "Email harus memuat tanda @, contoh nama@gmail.com.";
+        if (keperluan === "") {
+            errorBaru.keperluan = "Pilih salah satu keperluan.";
         }
-        setError(errorBaru);
-
-        return (
-            <form onSubmit={kirim} noValidate className="space-y-4">
-                <div>
-                    <label htmlFor="nama" className="block font-semibold">
-                        Nama lengkap
-                    </label>
-                    <input
-                        type="text"
-                        id="nama"
-                        name="nama"
-                        value={nama}
-                        onChange={(e) => setNama(e.target.value)}
-                        placeholder="Contoh: Budi Santoso"
-                        className={kelasInput}
-                    />
-                    {error.nama && <p className="mt-1 text-sm text-aksen">{error.nama}</p>}
-                </div>
-                <div>
-                    <label htmlFor="email" className="block font-semibold">
-                        Email
-                    </label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="nama@gmail.com"
-                        className={kelasInput}
-                    />
-                    {error.email && <p className="mt-1 text-sm text-aksen">{error.email}</p>}
-                </div>
-            </form>
-        );
+        if (pesan.trim().length < 10) {
+            errorBaru.pesan = "Pesan minimal 10 karakter.";
+        }
+        
+    setError(errorBaru);
+    setBerhasil(Object.keys(errorBaru).length === 0);
     }
+
+    return (
+        <form onSubmit={kirim} noValidate className="space-y-4">
+            <div>
+                <label htmlFor="nama" className="block font-semibold">
+                    Nama lengkap
+                </label>
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    value={nama}
+                    onChange={(e) => setNama(e.target.value)}
+                    placeholder="Contoh: Budi Santoso"
+                    className={kelasInput}
+                />
+                {error.nama && <p className="mt-1 text-sm text-aksen">{error.nama}</p>}
+            </div>
+            <div>
+                <label htmlFor="email" className="block font-semibold">
+                    Email
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="nama@gmail.com"
+                    className={kelasInput}
+                />
+                {error.email && <p className="mt-1 text-sm text-aksen">{error.email}</p>}
+            </div>
+        </form>
+    );
 }
+

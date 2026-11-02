@@ -47,7 +47,7 @@ export default function Tentang() {
     return (
         <main className="min-h-screen py-8 px-4">
             <div className="mx-auto max-w-5xl">
-                <h1 className="mb-8 text-3xl font-boldtext-utama dark:text-sky-200.md:text-2xl">Tentang saya</h1>
+                <h1 className="mb-8 text-3xl font-bold text-utama dark:text-sky-200 md:text-2xl">Tentang saya</h1>
                 <div className="rounded-xl border-gray-200 bg-white p-5 shadow-sm py-4">
                     <h2 className="mb-2 font-bold text-utama">Perkenalan</h2>
                     <h3 className="text-utama">saya tinggal di Pasuruan dan saya senang mencoba hal baru di dunia teknologi. Saya ingin bisa membuat web yang bermanfaat untuk sekolah dan UMKM sekitar rumah</h3>

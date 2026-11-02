@@ -12,7 +12,7 @@ export default function Hero({ nama, tagline }) {
               className="h-32 w-32 rounded-full border-4 border-aksen object-cover"
             />
             <div>
-                <h1 className="text-3xl font-boldtext-utama dark:text-sky-200.md:text-4xl">Halo, saya {nama}!</h1>
+                <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">Halo, saya {nama}!</h1>
                 <p className="mt-1 text-sm text-gray-700 md:text-base">{tagline}</p>
             </div>
         </section>
