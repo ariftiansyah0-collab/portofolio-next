@@ -1,18 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import FormKontak from "@/components/FormKontak";
 
 const kelasInput =
   "mt-1 w-full rounded-lg border border-gray-300 bg-white p-2 text-sm";
 
 export default function Kontak() {
   const [form, setForm] = useState({
-    nama: "Budi Santoso",
-    email: "budi@gmail.com",
-    nomorHp: "081234567890",
-    keperluan: "Pertanyaan",
-    pesan: "Halo, saya ingin bertanya tentang proyek kalkulator.",
+    nama: "",
+    email: "",
+    nomorHp: "",
+    keperluan: "",
+    pesan: "",
   });
   const [error, setError] = useState({});
   const [berhasil, setBerhasil] = useState(false);
@@ -62,7 +61,7 @@ export default function Kontak() {
                   Nama lengkap
                 </label>
                 <input id="nama" name="nama" value={form.nama} onChange={ubahForm} placeholder="Contoh: Budi Santoso" className={kelasInput} />
-                <FormKontak pesan={error.nama} />
+                {error.nama && <p className="mt-1 text-sm text-red-700">{error.nama}</p>}
               </div>
 
               <div>
@@ -70,7 +69,7 @@ export default function Kontak() {
                   Email
                 </label>
                 <input id="email" name="email" type="email" value={form.email} onChange={ubahForm} placeholder="nama@gmail.com" className={kelasInput} />
-                <FormKontak pesan={error.email} />
+                {error.email && <p className="mt-1 text-sm text-red-700">{error.email}</p>}
               </div>
 
               <div>
@@ -78,7 +77,7 @@ export default function Kontak() {
                   Nomor HP
                 </label>
                 <input id="nomorHp" name="nomorHp" type="tel" value={form.nomorHp} onChange={ubahForm} placeholder="081234567890" className={kelasInput} />
-                <FormKontak pesan={error.nomorHp} />
+                {error.nomorHp && <p className="mt-1 text-sm text-red-700">{error.nomorHp}</p>}
               </div>
 
               <div>
@@ -90,7 +89,7 @@ export default function Kontak() {
                   <option value="Kerja Sama">Kerja Sama</option>
                   <option value="Pertanyaan">Pertanyaan</option>
                 </select>
-                <FormKontak pesan={error.keperluan} />
+                {error.keperluan && <p className="mt-1 text-sm text-red-700">{error.keperluan}</p>}
               </div>
 
               <div>
@@ -98,7 +97,7 @@ export default function Kontak() {
                   Pesan
                 </label>
                 <textarea id="pesan" name="pesan" rows={5} value={form.pesan} onChange={ubahForm} placeholder="Tulis pesanmu di sini" className={`${kelasInput} resize-y`} />
-                <FormKontak pesan={error.pesan} />
+                {error.pesan && <p className="mt-1 text-sm text-red-700">{error.pesan}</p>}
               </div>
 
               <button type="submit" className="rounded-md bg-red-700 px-5 py-2 text-sm font-bold text-white hover:bg-red-800">
