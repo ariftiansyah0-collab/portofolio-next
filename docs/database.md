@@ -12,8 +12,7 @@ Daftar Proyek portofolio Fajriel Ariftiansyah.
 | --- | --- | --- |
 | `id` | `int8` | Primary key, nomor otomatis 1, 2, 3, ... |
 | `created_at` | `timestampz` | Waktu bisa dibuat, terisi otomatis dengan `now()` |
-| `slug` | `text` | Penanda unik di alamat, misalnya `halaman
-profil` (unik) |
+| `slug` | `text` | Penanda unik di alamat, misalnya `halaman-profil` (unik)
 | `judul` | `text` | Judul proyek |
 | `deskripsi` | `text` | Kalimat singkat tentang proyek |
 | `kategori` | `text` | HTML, CSS, atau JavaScript |
@@ -40,7 +39,7 @@ RLS aktif tanpa policy, sehingga pengunjung tidak bisa membaca
 pesan. Policy `insert` dibuat di Minggu 15.
 
 ## Tabel `skills`
-Daftar keahlian Fajriel Ariftiansyah.
+Daftar keahlian Fajriel.
 | Kolom | Tipe | Keterangan |
 | --- | --- | --- |
 | `id` | `int8` | Primary key, nomor otomatis 1, 2, 3, ... |
