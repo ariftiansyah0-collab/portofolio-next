@@ -3,6 +3,15 @@ import Link from "next/link";
 import { proyek } from "@/data/proyek"
 import { notFound } from "next/navigation";
 
+async function ambilProyek(slug) {
+    const { data } = await supabase
+    .from("projects")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+    return data;
+}
+
 export async function generateMetadata({ params }) {
     const { slug } = await params;
     const item = proyek.find((p) => p.slug === slug);
@@ -27,7 +36,7 @@ export default async function DetailProyek({ params }) {
             <Link href="/proyek" className="text-sm font-semibold text-aksen hover:underline">
                 &larr; Kembali ke Daftar Proyek
             </Link>
-            <h1 className="mt-4 text-3xl font-boldtext-utama dark:text-sky-200.md:text-4xl">{item.judul}</h1>
+            <h1 className="mt-4 text-3xl font-boldtext-primarymd:text-4xl">{item.judul}</h1>
             <p className="mt-2 text-gray-600">{item.kategori} &middot; Dibuat di {item.minggu}
             </p>
             <Image

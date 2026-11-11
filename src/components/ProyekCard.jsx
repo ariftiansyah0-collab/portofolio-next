@@ -1,25 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function ProyekCard({ proyek }) {
+    console.log("DATA PROYEK:", proyek);
+    console.log("GAMBAR URL:", proyek.gambar_url);
+    console.log("Data gambar:", proyek.gambar_url);
     return (
         <Link
             href={`/proyek/${proyek.slug}`}
-            className="block overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md">
-            <Image
-                src={proyek.gambar}
-                alt={`Tangkapan layar ${proyek.judul}`}
-                width={460}
-                height={420}
-                className="aspect-video w-full object-cover"
-            />
-
-            <div className="p-3">
-                <span className="rounded-full bg-latar px-3 py-1 text-xs font-semibold text-utama">{proyek.kategori}</span>
-                <h3 className="mt-2 text-sm font-semibold text-utama">{proyek.judul}</h3>
-                <p className="mt-1 text-xs text-gray-600">{proyek.deskripsi}
-                </p>
-            </div>
+            className="block rounded xl hover:shadow-md">
+            <Card className="h-full">
+                <Image
+                    src={proyek.gambar_url}
+                    alt={`Tangkapan layar ${proyek.judul}`}
+                    width={640}
+                    height={420}
+                    loading="eager"
+                    className="h-auto w-full"
+                />
+                <CardHeader>
+                    <Badge>{proyek.kategori}</Badge>
+                    <CardTitle className="text-lg text-primary">{proyek.judul}
+                    </CardTitle>
+                    <CardDescription>{proyek.deskripsi}</CardDescription>
+                </CardHeader>
+            </Card>
         </Link>
     )
 }

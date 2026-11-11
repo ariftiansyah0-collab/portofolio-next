@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import ProyekCard from "@/components/ProyekCard";
+import { Button } from "@/components/ui/button";
 
 const daftarKategori = ["Semua", "HTML", "CSS", "JavaScript"];
-const tombolBiasa = "rounded-full border border-utama px-4 py-1 text-sm font-semibold text-utama";
-const tombolAktif = "rounded-full border border-aksen bg-aksen px-4 py-1 text-sm font-semibold text-white";
 
 export default function FilterProyek({ proyek }) {
     const [kategori, setKategori] = useState("Semua");
@@ -24,15 +23,13 @@ export default function FilterProyek({ proyek }) {
         <div className="mx-auto w-full max-w-5xl px-4 py-10">
             <div className="flex flex-wrap gap-2">
                 {daftarKategori.map((k) => (
-                    <button
+                    <Button
                         key={k}
-                        type="button"
+                        variant={kategori === k ? "default" : "outline"}
                         onClick={() => setKategori(k)}
-                        className={kategori === k ? tombolAktif : tombolBiasa}
-                        aria-pressed={kategori === k}
                     >
                         {k}
-                    </button>
+                    </Button>
                 ))}
             </div>
             <div className="mt-6">
@@ -49,9 +46,9 @@ export default function FilterProyek({ proyek }) {
                 />
                 {kata !== "" && (
                     <button
-                        type="button"
-                        onClick={() => setKata("")}
-                        className="mt-2 text-sm font-semibold text-aksen dark:text-red-300 hover:underline"
+                        variant="link"
+                        onClick={ () => setKata("")} 
+                        className="mt-2 px-0 text-aksen"
                     >
                         Hapus pencarian
                     </button>
